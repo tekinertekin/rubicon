@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rubicon-agent"          # PyPI'da "rubicon" dolu olabilir — kurulum adi sonra netlesir
+version = "0.0.1"
+description = "A small agent that decides its own steps and escalates to a human when unsure."
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = [
+    "langgraph",                # ajanin karar dongusu (durum grafigi)
+    "langchain-core",           # arac (tool) sarmalayici
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
